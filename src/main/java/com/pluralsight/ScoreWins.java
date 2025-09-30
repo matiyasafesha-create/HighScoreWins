@@ -25,6 +25,7 @@ public class ScoreWins {
         // here i have divided the home and visitor moving on the score ':'
 
 
+
         /// here we are conversting to int we willbe using pare int
         String [] scorelist = score.split(":");
         int score1 = Integer.parseInt(scorelist[0]);
