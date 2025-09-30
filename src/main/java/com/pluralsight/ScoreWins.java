@@ -7,25 +7,62 @@ public class ScoreWins {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please Enter A Game Score ? ");
-        String input = scanner.nextLine();
+        String input = scanner.nextLine().trim();
 
-        String []parts = input.split("\\|");
+        // First we Parce the Home:visitor | 21:9 the score
 
-        System.out.println(parts);
+        String [] firstpart = input.split("\\|");
+
+        String team = firstpart [0];
+        String score = firstpart [1];
+
+       // System.out.println(team + score);//
+        // okay now after dividing  | here we need to divide :
+
+        String [] teamlist = team.split(":");
+        String home = teamlist [0];
+        String Visitor = teamlist [1];
+        // here i have divided the home and visitor moving on the score ':'
+
+
+        /// here we are conversting to int we willbe using pare int
+        String [] scorelist = score.split(":");
+        int score1 = Integer.parseInt(scorelist[0]);
+        int score2 = Integer.parseInt(scorelist[1]);
+
+        //System.out.println(home);
+       // System.out.println(Visitor);
+      //  System.out.println(score1);
+      //  System.out.println(score2);
+
+       // System.out.println(home + "Score " +score1);
+        //System.out.println(Visitor + "Score " + score2);
+
+        if (score1 > score2){
+            System.out.println("winner : " + home);
+        }else if (score2 > score1){
+            System.out.println("winner : " + Visitor);
+        }else {
+            System.out.println(" Error Wrong Entry !!! ");
+        }
 
 
 
 
-        //String [] newinput = input.split (Pattern.quote(":"));
-        //String [] newinput1 = input.split (Pattern.quote("\\|"));
 
 
-       // String name1 = newinput [0];
-        //String name2 = newinput [1];
-        //int first = Integer.parseInt(newinput[2]);
-        //int second = Integer.parseInt(newinput[3]);
 
-        //System.out.println(name1 + name2 + first);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
